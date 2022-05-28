@@ -1,0 +1,16 @@
+{
+  "name": "cabinet_mock",
+  "version": "1.0.0",
+  "description": "sfedu cabinet service mock to test and develop grade service",
+  "main": "index.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "echo \"no tests are here\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "soap": "^0.29.0"
+  }
+}

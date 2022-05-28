@@ -1,0 +1,196 @@
+{
+	"info": {
+		"_postman_id": "173dbc71-c92a-4bea-bd3b-e1285be0330e",
+		"name": "grade-sync runnable",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "sync teachers  with preprocessing",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{syncURL}}/teachers/preprocess?enableDismissed=0",
+					"host": [
+						"{{syncURL}}"
+					],
+					"path": [
+						"teachers",
+						"preprocess"
+					],
+					"query": [
+						{
+							"key": "enableDismissed",
+							"value": "0"
+						},
+						{
+							"key": "facultyId",
+							"value": "59f89490055286927b633476",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sync plans",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{syncURL}}/plans?year={{year}}&semester={{semester}}&form=1",
+					"host": [
+						"{{syncURL}}"
+					],
+					"path": [
+						"plans"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "{{year}}"
+						},
+						{
+							"key": "semester",
+							"value": "{{semester}}"
+						},
+						{
+							"key": "form",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sync plans evening",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{syncURL}}/plans?year={{year}}&semester={{semester}}&form=2",
+					"host": [
+						"{{syncURL}}"
+					],
+					"path": [
+						"plans"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "{{year}}"
+						},
+						{
+							"key": "semester",
+							"value": "{{semester}}"
+						},
+						{
+							"key": "form",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sync plans parttime",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{syncURL}}/plans?year={{year}}&semester={{semester}}&form=3",
+					"host": [
+						"{{syncURL}}"
+					],
+					"path": [
+						"plans"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "{{year}}"
+						},
+						{
+							"key": "semester",
+							"value": "{{semester}}"
+						},
+						{
+							"key": "form",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sync students",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{syncURL}}/students?enableDismissed=0",
+					"host": [
+						"{{syncURL}}"
+					],
+					"path": [
+						"students"
+					],
+					"query": [
+						{
+							"key": "enableDismissed",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "a71f21a2-c56a-49ba-9782-059771ca6628",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "8ad6a33b-9d19-4707-9ef3-a2ec82ceaa4b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

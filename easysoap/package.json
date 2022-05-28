@@ -1,0 +1,73 @@
+{
+  "_args": [
+    [
+      "easysoap@1.0.6",
+      "C:\\work\\Grade\\grade-sync"
+    ]
+  ],
+  "_from": "easysoap@1.0.6",
+  "_id": "easysoap@1.0.6",
+  "_inBundle": false,
+  "_integrity": "sha1-hWXnhN5S2gGG3isoQo4LKWXTc18=",
+  "_location": "/easysoap",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "easysoap@1.0.6",
+    "name": "easysoap",
+    "escapedName": "easysoap",
+    "rawSpec": "1.0.6",
+    "saveSpec": null,
+    "fetchSpec": "1.0.6"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/easysoap/-/easysoap-1.0.6.tgz",
+  "_spec": "1.0.6",
+  "_where": "C:\\work\\Grade\\grade-sync",
+  "author": {
+    "name": "Michael Röber",
+    "email": "moszeed@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/moszeed/easysoap/issues"
+  },
+  "contributors": [
+    {
+      "name": "Michael Röber",
+      "email": "moszeed@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "request": "^2.69.0",
+    "underscore": "^1.8.3",
+    "wsdlrdr": "^0.3.9",
+    "xmldoc": "^0.4.0"
+  },
+  "description": "a easy to use Soap Client for Node.js",
+  "devDependencies": {
+    "tap-spec": "^4.1.0",
+    "tape": "^4.2.2"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "homepage": "https://github.com/moszeed/easysoap#readme",
+  "keywords": [
+    "soap",
+    "wsdl"
+  ],
+  "license": "MIT",
+  "main": "./src/easysoap.js",
+  "name": "easysoap",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moszeed/easysoap.git"
+  },
+  "scripts": {
+    "test": "node ./tests/tests.js | tap-spec"
+  },
+  "version": "1.0.6"
+}

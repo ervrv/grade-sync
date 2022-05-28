@@ -1,0 +1,609 @@
+{
+	"info": {
+		"_postman_id": "73ce5117-4383-4ca7-b01b-bde0906e7bce",
+		"name": "grade-sync",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "dump teachers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{syncURL}}/teachers/dump?enableDismissed=0&usemongo=true",
+					"host": [
+						"{{syncURL}}"
+					],
+					"path": [
+						"teachers",
+						"dump"
+					],
+					"query": [
+						{
+							"key": "enableDismissed",
+							"value": "0"
+						},
+						{
+							"key": "usemongo",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dump teachers with date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{syncURL}}/teachers/dump?enableDismissed=0&usemongo=true&usedate=true",
+					"host": [
+						"{{syncURL}}"
+					],
+					"path": [
+						"teachers",
+						"dump"
+					],
+					"query": [
+						{
+							"key": "enableDismissed",
+							"value": "0"
+						},
+						{
+							"key": "usemongo",
+							"value": "true"
+						},
+						{
+							"key": "usedate",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sync teachers  with preprocessing",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{syncURL}}/teachers/preprocess?enableDismissed=0",
+					"host": [
+						"{{syncURL}}"
+					],
+					"path": [
+						"teachers",
+						"preprocess"
+					],
+					"query": [
+						{
+							"key": "enableDismissed",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dump plans",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{syncURL}}/plans/dump?year=2018-19&semester=1&form=1&usemongo=true",
+					"host": [
+						"{{syncURL}}"
+					],
+					"path": [
+						"plans",
+						"dump"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "2018-19"
+						},
+						{
+							"key": "semester",
+							"value": "1"
+						},
+						{
+							"key": "form",
+							"value": "1"
+						},
+						{
+							"key": "usemongo",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dump plans with date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{syncURL}}/plans/dump?year=2018-19&semester=1&form=1&usemongo=true&usedate=true",
+					"host": [
+						"{{syncURL}}"
+					],
+					"path": [
+						"plans",
+						"dump"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "2018-19"
+						},
+						{
+							"key": "semester",
+							"value": "1"
+						},
+						{
+							"key": "form",
+							"value": "1"
+						},
+						{
+							"key": "usemongo",
+							"value": "true"
+						},
+						{
+							"key": "usedate",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dump students",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{syncURL}}/students/dump?enableDismissed=0&usemongo=true",
+					"host": [
+						"{{syncURL}}"
+					],
+					"path": [
+						"students",
+						"dump"
+					],
+					"query": [
+						{
+							"key": "enableDismissed",
+							"value": "0"
+						},
+						{
+							"key": "usemongo",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dump students with date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{syncURL}}/students/dump?enableDismissed=0&usemongo=true&usedate=true",
+					"host": [
+						"{{syncURL}}"
+					],
+					"path": [
+						"students",
+						"dump"
+					],
+					"query": [
+						{
+							"key": "enableDismissed",
+							"value": "0"
+						},
+						{
+							"key": "usemongo",
+							"value": "true"
+						},
+						{
+							"key": "usedate",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sync enable disable",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{syncURL}}/:enable?faculty=:faculty&type=:type&lastDate=:lastDate",
+					"host": [
+						"{{syncURL}}"
+					],
+					"path": [
+						":enable"
+					],
+					"query": [
+						{
+							"key": "faculty",
+							"value": ":faculty"
+						},
+						{
+							"key": "type",
+							"value": ":type"
+						},
+						{
+							"key": "lastDate",
+							"value": ":lastDate"
+						}
+					],
+					"variable": [
+						{
+							"key": "enable",
+							"value": "enable",
+							"description": "enable or disable\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "subdivisions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{syncURL}}/faculties/self",
+					"host": [
+						"{{syncURL}}"
+					],
+					"path": [
+						"faculties",
+						"self"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sync from mongo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{syncURL}}/sync-db",
+					"host": [
+						"{{syncURL}}"
+					],
+					"path": [
+						"sync-db"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sync logs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{syncURL}}/logs",
+					"host": [
+						"{{syncURL}}"
+					],
+					"path": [
+						"logs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sync teachers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{syncURL}}/teachers?enableDismissed=0",
+					"host": [
+						"{{syncURL}}"
+					],
+					"path": [
+						"teachers"
+					],
+					"query": [
+						{
+							"key": "enableDismissed",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sync plans",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{syncURL}}/plans?year=2018-19&semester=1&form=1",
+					"host": [
+						"{{syncURL}}"
+					],
+					"path": [
+						"plans"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "2018-19"
+						},
+						{
+							"key": "semester",
+							"value": "1"
+						},
+						{
+							"key": "form",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sync forms",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{syncURL}}/forms?year=2018-19&semester=1&plan=000133620&discipline=000039983",
+					"host": [
+						"{{syncURL}}"
+					],
+					"path": [
+						"forms"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "2018-19"
+						},
+						{
+							"key": "semester",
+							"value": "1"
+						},
+						{
+							"key": "plan",
+							"value": "000133620"
+						},
+						{
+							"key": "discipline",
+							"value": "000039983"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sync forms request xml",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{syncURL}}/forms/request?year=2018-19&semester=1&plan=000133620&discipline=000039983",
+					"host": [
+						"{{syncURL}}"
+					],
+					"path": [
+						"forms",
+						"request"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "2018-19"
+						},
+						{
+							"key": "semester",
+							"value": "1"
+						},
+						{
+							"key": "plan",
+							"value": "000133620"
+						},
+						{
+							"key": "discipline",
+							"value": "000039983"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sync group forms request xml",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{syncURL}}/forms/request?year=2018-19&semester=1&plan=000133620&discipline=000039983&groupnum=2&gradenum=4&faculty=1&form=2",
+					"host": [
+						"{{syncURL}}"
+					],
+					"path": [
+						"forms",
+						"request"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "2018-19"
+						},
+						{
+							"key": "semester",
+							"value": "1"
+						},
+						{
+							"key": "plan",
+							"value": "000133620"
+						},
+						{
+							"key": "discipline",
+							"value": "000039983"
+						},
+						{
+							"key": "groupnum",
+							"value": "2"
+						},
+						{
+							"key": "gradenum",
+							"value": "4"
+						},
+						{
+							"key": "faculty",
+							"value": "1"
+						},
+						{
+							"key": "form",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sync students",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{syncURL}}/students?enableDismissed=0",
+					"host": [
+						"{{syncURL}}"
+					],
+					"path": [
+						"students"
+					],
+					"query": [
+						{
+							"key": "enableDismissed",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sync faculties",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{syncURL}}/faculties/self",
+					"host": [
+						"{{syncURL}}"
+					],
+					"path": [
+						"faculties",
+						"self"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

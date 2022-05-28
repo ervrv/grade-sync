@@ -1,0 +1,41 @@
+{
+	"collection": "disciplines",
+	"aggregate": [{
+		"$match": {}
+	}, {
+		"$lookup": {
+			"from": "faculties",
+			"localField": "facultyId",
+			"foreignField": "_id",
+			"as": "facultyName"
+		}
+	}, {
+		"$project": {
+			"_id": 1,
+			"externalID": 1,
+			"name": 1,
+			"planExternalID": 1,
+			"teachers": 1,
+			"type": 1,
+			"global": 1,
+			"facultyName": "$facultyName.name"
+		}
+	}, {
+		"$match": {
+			"facultyName": ["Институт филологии, журналистики и межкультурной коммуникации"]
+		}
+	}, {
+		"$unwind": "$teachers"
+	},{
+		"$lookup": {
+			"from": "teachers",
+			"localField": "teachers.hashSnils",
+			"foreignField": "inila",
+			"as": "TeacherInila"
+		}
+	},{
+		"$match": {
+			"TeacherInila": []
+		}
+	}]
+}

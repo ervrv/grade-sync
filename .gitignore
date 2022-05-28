@@ -1,0 +1,26 @@
+# Logs
+npm-debug.log*
+
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# JetBrains IDE
+.idea/
+
+# project rules
+/conf/app.env
+/conf/app.js
+/dump/
+/log/
+/tmp/
+
+fixtures
+dump
+
+.env

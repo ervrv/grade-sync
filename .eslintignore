@@ -1,0 +1,9 @@
+# Dependency directories
+node_modules/
+
+# project rules
+/bin/www
+/conf/app.js
+/dump/
+/log/
+/tmp/

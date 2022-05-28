@@ -1,0 +1,46 @@
+{
+	"collection": "teachers",
+	"aggregate": [{
+		"$match": {}
+	}, {
+		"$lookup": {
+			"from": "faculties",
+			"localField": "facultyId",
+			"foreignField": "_id",
+			"as": "facultyName"
+		}
+	}, {
+		"$project": {
+			"_id": 1,
+			"firstName": 1,
+			"secondName": 1,
+			"lastName": 1,
+			"inila": 1,
+			"status": 1,
+			"jobPositionName": 1,
+			"externalID": 1,
+			"facultyName": "$facultyName.name"
+		}
+	}, {
+		"$group": {
+			"_id": "$externalID",
+			"firstName": {"$first": "$firstName"},
+			"secondName": {"$first": "$secondName"},
+			"lastName": {"$first": "$lastName"},
+			"inila": {"$first": "$inila"},
+			"status": {"$first": "$status"},
+			"jobPositionName": {"$first": "$jobPositionName"},
+			"externalID": {"$first": "$externalID"},
+			"facultyName": {"$first": "$facultyName"}
+
+		}
+	}, {
+		"$sort": [{
+			"name": "count",
+			"direction": -1
+		}, {
+			"name": "_id",
+			"direction": -1
+		}]
+	}]
+}

@@ -1,0 +1,32 @@
+{
+	"collection": "disciplines",
+	"aggregate": [{
+		"$match": {}
+	}, {
+		"$lookup": {
+			"from": "faculties",
+			"localField": "facultyId",
+			"foreignField": "_id",
+			"as": "facultyName"
+		}
+	}, {
+		"$project": {
+			"_id": 1,
+			"externalID": 1,
+			"name": 1,
+			"planExternalID": 1,
+			"teachers": 1,
+			"type": 1,
+			"global": 1,
+			"facultyName": "$facultyName.name"
+		}
+	}, {
+		"$sort": [{
+			"name": "externalID",
+			"direction": -1
+		}, {
+			"name": "_id",
+			"direction": -1
+		}]
+	}]
+}

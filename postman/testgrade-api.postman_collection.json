@@ -1,0 +1,358 @@
+{
+	"info": {
+		"_postman_id": "9b0c01db-a8b2-4dd8-be48-c848c16da446",
+		"name": "testgrade-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "testgrade auth user info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{gradeURL}}/api/v0/auth/userinfo?token=a4c0b662d23cb418c60c641b2a3b22f83a0c66e5&login=rs&password=11111",
+					"host": [
+						"{{gradeURL}}"
+					],
+					"path": [
+						"api",
+						"v0",
+						"auth",
+						"userinfo"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "a4c0b662d23cb418c60c641b2a3b22f83a0c66e5"
+						},
+						{
+							"key": "login",
+							"value": "rs"
+						},
+						{
+							"key": "password",
+							"value": "11111"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "testgrade add teacher test",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"faculty\": \"000001387\",\r\n  \"teachers\": [\r\n   {\r\n            \"externalID\": \"001246332\",\r\n            \"firstName\": \"Test2\",\r\n            \"secondName\": \"Test2\",\r\n            \"lastName\": \"Test2\",\r\n            \"jobPositionName\": \"Доцент\",\r\n            \"status\": \"Работает\",\r\n            \"departmentExternalID\": \"000001387\"\r\n   }\r\n  ] \r\n}"
+				},
+				"url": {
+					"raw": "{{gradeURL}}/api/v0/teacher?token=a4c0b662d23cb418c60c641b2a3b22f83a0c66e5&batch=json",
+					"host": [
+						"{{gradeURL}}"
+					],
+					"path": [
+						"api",
+						"v0",
+						"teacher"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "a4c0b662d23cb418c60c641b2a3b22f83a0c66e5"
+						},
+						{
+							"key": "batch",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "testgrade add teacher test debug",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"faculty\": \"000001387\",\r\n  \"teachers\": [\r\n  {\r\n            \"status\" : \"Работает\", \r\n            \"firstName\" : \"Владимир\", \r\n            \"lastName\" : \"Камакин\", \r\n            \"inila\" : \"51282B076E82FB3A4566A8EFFBB2333637C99982\", \r\n            \"externalID\" : \"4300000000\", \r\n            \"secondName\" : \"Алексеевич\", \r\n            \"departmentExternalID\" : \"000001387\", \r\n            \"jobPositionName\" : \"Старший преподаватель\"\r\n        }\r\n  ] \r\n}"
+				},
+				"url": {
+					"raw": "{{gradeURL}}/api/v0/teacher?token=a4c0b662d23cb418c60c641b2a3b22f83a0c66e5&batch=json",
+					"host": [
+						"{{gradeURL}}"
+					],
+					"path": [
+						"api",
+						"v0",
+						"teacher"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "a4c0b662d23cb418c60c641b2a3b22f83a0c66e5"
+						},
+						{
+							"key": "batch",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "testgrade add student test",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"faculty\": \"000001388\",\r\n  \"students\": [\r\n  {\r\n            \"externalID\" : \"000150475\", \r\n            \"firstName\" : \"Мостафа\", \r\n            \"secondName\" : \"Абдаллах Ахмед\", \r\n            \"lastName\" : \"Абделхафиз\", \r\n            \"recordBooks\" : [\r\n                {\r\n                    \"externalID\" : \"ММ-15-0453\", \r\n                    \"planExternalID\" : \"000132180\", \r\n                    \"facultyExternalID\" : \"000001387\", \r\n                    \"status\" : \"Учится\", \r\n                    \"degree\" : \"Аспирант\", \r\n                    \"form\" : \"Очная\", \r\n                    \"speciality\" : \"01.06.01 - Математика и механика\", \r\n                    \"grade\" : \"3\", \r\n                    \"group\" : \"1\"\r\n                }\r\n            ]\r\n        }\r\n  ] \r\n}"
+				},
+				"url": {
+					"raw": "{{gradeURL}}/api/v0/student?token=a4c0b662d23cb418c60c641b2a3b22f83a0c66e5&batch=json",
+					"host": [
+						"{{gradeURL}}"
+					],
+					"path": [
+						"api",
+						"v0",
+						"student"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "a4c0b662d23cb418c60c641b2a3b22f83a0c66e5"
+						},
+						{
+							"key": "batch",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "testgrade get final report",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{gradeURL}}/api/v0/final-report?token=a4c0b662d23cb418c60c641b2a3b22f83a0c66e5&year=2018&num=1&plan=000133620&discipline=000039983",
+					"host": [
+						"{{gradeURL}}"
+					],
+					"path": [
+						"api",
+						"v0",
+						"final-report"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "a4c0b662d23cb418c60c641b2a3b22f83a0c66e5"
+						},
+						{
+							"key": "year",
+							"value": "2018"
+						},
+						{
+							"key": "num",
+							"value": "1"
+						},
+						{
+							"key": "plan",
+							"value": "000133620"
+						},
+						{
+							"key": "discipline",
+							"value": "000039983"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "testgrade add student test debug",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"faculty\": \"000001387\",\r\n  \"students\": [\r\n     {\r\n            \"externalID\": \"000143307\",\r\n            \"firstName\": \"Станислав\",\r\n            \"secondName\": \"Игоревич\",\r\n            \"lastName\": \"Миненко\",\r\n            \"recordBooks\": [\r\n                {\r\n                    \"externalID\": \"ММ-15-0004\",\r\n                    \"planExternalID\": \"000133620\",\r\n                    \"facultyExternalID\": \"000001387\",\r\n                    \"status\": \"Учится\",\r\n                    \"degree\": \"Академический бакалавр\",\r\n                    \"form\": \"Очно-заочная\",\r\n                    \"speciality\": \"02.03.02 - Фундаментальная информатика и информационные технологии\",\r\n                    \"grade\": \"4\",\r\n                    \"group\": \"2\"\r\n                }\r\n            ]\r\n        }\r\n  ] \r\n}"
+				},
+				"url": {
+					"raw": "{{gradeURL}}/api/v0/student?token=a4c0b662d23cb418c60c641b2a3b22f83a0c66e5&batch=json",
+					"host": [
+						"{{gradeURL}}"
+					],
+					"path": [
+						"api",
+						"v0",
+						"student"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "a4c0b662d23cb418c60c641b2a3b22f83a0c66e5"
+						},
+						{
+							"key": "batch",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "testgrade add plan test",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"faculty\": \"000001387\",\n   \"year\": \"2018\",\n   \"semester\": \"1\",\n   \"plans\": [\n   \t{\n            \"externalID\": \"000133620\",\n            \"disciplines\": [\n                {\n                    \"externalID\": \"000145371\",\n                    \"name\": \"Иностранный язык 2 (английский)\",\n                    \"type\": \"Зачет\",\n                    \"teachers\": [\n                        {\n                            \"hashSnils\": \"\"\n                        },\n                        {\n                            \"hashSnils\": \"E043D16D4A36F7C4306B0EDC1C82E0E1D6E5CFF6\"\n                        },\n                        {\n                            \"hashSnils\": \"435F6F584A5636D881CF085487157DAEA76FBC8E\"\n                        },\n                        {\n                            \"hashSnils\": \"653A81C0F2FD15983C5671A4020CCA545A403426\"\n                        }\n                    ]\n                },\n                {\n                    \"externalID\": \"000145372\",\n                    \"name\": \"Иностранный язык 2 (немецкий)\",\n                    \"type\": \"Зачет\",\n                    \"teachers\": [\n                        {\n                            \"hashSnils\": \"\"\n                        }\n                    ]\n                },\n                {\n                    \"externalID\": \"000145485\",\n                    \"name\": \"CS352. Основы программирования в 1С\",\n                    \"type\": \"Зачет\",\n                    \"teachers\": [\n                        {\n                            \"hashSnils\": \"\"\n                        }\n                    ]\n                },\n                {\n                    \"externalID\": \"000134544\",\n                    \"name\": \"CS332. Компьютерная графика\",\n                    \"type\": \"Экзамен\",\n                    \"teachers\": [\n                        {\n                            \"hashSnils\": \"CBD23ED3662C04369959EF92FF18CB0338AC9F14\"\n                        },\n                        {\n                            \"hashSnils\": \"A64F07C81E633CDE42DEDDEE06543355687001A7\"\n                        }\n                    ]\n                },\n                {\n                    \"externalID\": \"000139978\",\n                    \"name\": \"CS253. Интеллектуальные системы\",\n                    \"type\": \"Экзамен\",\n                    \"teachers\": [\n                        {\n                            \"hashSnils\": \"40C19EF887182938667B5AAC628F3FFD336528F2\"\n                        }\n                    ]\n                },\n                {\n                    \"externalID\": \"000139979\",\n                    \"name\": \"CS261. Программная инженерия\",\n                    \"type\": \"Экзамен\",\n                    \"teachers\": [\n                        {\n                            \"hashSnils\": \"65497D370081F92DD4CE65CE6E67BF06135CAD98\"\n                        }\n                    ]\n                },\n                {\n                    \"externalID\": \"000139980\",\n                    \"name\": \"CS301. Теория языков программирования\",\n                    \"type\": \"Зачет\",\n                    \"teachers\": [\n                        {\n                            \"hashSnils\": \"\"\n                        }\n                    ]\n                },\n                {\n                    \"externalID\": \"000139982\",\n                    \"name\": \"CS311. Разработка компиляторов\",\n                    \"type\": \"Зачет\",\n                    \"teachers\": [\n                        {\n                            \"hashSnils\": \"\"\n                        },\n                        {\n                            \"hashSnils\": \"F6930CAE2DC449852775EDC953649339430BA297\"\n                        },\n                        {\n                            \"hashSnils\": \"B470526451C1A36747CD53AC6E0A8A753C4E6730\"\n                        }\n                    ]\n                },\n                {\n                    \"externalID\": \"000139984\",\n                    \"name\": \"CS321. Параллельное и многопоточное программирование\",\n                    \"type\": \"Зачет\",\n                    \"teachers\": [\n                        {\n                            \"hashSnils\": \"\"\n                        },\n                        {\n                            \"hashSnils\": \"45D58A5A2C33C45D02FAAC3829E28A0E6DF19C0E\"\n                        }\n                    ]\n                }\n            ]\n        }\n   \t]\n}"
+				},
+				"url": {
+					"raw": "{{gradeURL}}/api/v0/studyPlan?token=a4c0b662d23cb418c60c641b2a3b22f83a0c66e5&batch=json",
+					"host": [
+						"{{gradeURL}}"
+					],
+					"path": [
+						"api",
+						"v0",
+						"studyPlan"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "a4c0b662d23cb418c60c641b2a3b22f83a0c66e5"
+						},
+						{
+							"key": "batch",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "testgrade add plan test debug",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"faculty\": \"000001387\",\n   \"year\": \"2018\",\n   \"semester\": \"1\",\n   \"plans\": [\n   \t{\n            \"externalID\": \"000133620\",\n            \"disciplines\": [\n                {\n                    \"externalID\": \"000045371\",\n                    \"name\": \"Иностранный язык 2 (английский)\",\n                    \"type\": \"Зачет\",\n                    \"teachers\": [\n                        {\n                            \"hashSnils\": \"\"\n                        },\n                        {\n                            \"hashSnils\": \"E043D16D4A36F7C4306B0EDC1C82E0E1D6E5CFF6\"\n                        },\n                        {\n                            \"hashSnils\": \"435F6F584A5636D881CF085487157DAEA76FBC8E\"\n                        },\n                        {\n                            \"hashSnils\": \"653A81C0F2FD15983C5671A4020CCA545A403426\"\n                        }\n                    ]\n                },\n                {\n                    \"externalID\": \"000045372\",\n                    \"name\": \"Иностранный язык 2 (немецкий)\",\n                    \"type\": \"Зачет\",\n                    \"teachers\": [\n                        {\n                            \"hashSnils\": \"\"\n                        }\n                    ]\n                },\n                {\n                    \"externalID\": \"000045485\",\n                    \"name\": \"CS352. Основы программирования в 1С\",\n                    \"type\": \"Зачет\",\n                    \"teachers\": [\n                        {\n                            \"hashSnils\": \"\"\n                        }\n                    ]\n                },\n                {\n                    \"externalID\": \"000034544\",\n                    \"name\": \"CS332. Компьютерная графика\",\n                    \"type\": \"Экзамен\",\n                    \"teachers\": [\n                        {\n                            \"hashSnils\": \"CBD23ED3662C04369959EF92FF18CB0338AC9F14\"\n                        },\n                        {\n                            \"hashSnils\": \"A64F07C81E633CDE42DEDDEE06543355687001A7\"\n                        }\n                    ]\n                },\n                {\n                    \"externalID\": \"000039978\",\n                    \"name\": \"CS253. Интеллектуальные системы\",\n                    \"type\": \"Экзамен\",\n                    \"teachers\": [\n                        {\n                            \"hashSnils\": \"40C19EF887182938667B5AAC628F3FFD336528F2\"\n                        }\n                    ]\n                },\n                {\n                    \"externalID\": \"000039979\",\n                    \"name\": \"CS261. Программная инженерия\",\n                    \"type\": \"Экзамен\",\n                    \"teachers\": [\n                        {\n                            \"hashSnils\": \"65497D370081F92DD4CE65CE6E67BF06135CAD98\"\n                        }\n                    ]\n                },\n                {\n                    \"externalID\": \"000039980\",\n                    \"name\": \"CS301. Теория языков программирования\",\n                    \"type\": \"Зачет\",\n                    \"teachers\": [\n                        {\n                            \"hashSnils\": \"\"\n                        }\n                    ]\n                },\n                {\n                    \"externalID\": \"000039982\",\n                    \"name\": \"CS311. Разработка компиляторов\",\n                    \"type\": \"Зачет\",\n                    \"teachers\": [\n                        {\n                            \"hashSnils\": \"\"\n                        },\n                        {\n                            \"hashSnils\": \"F6930CAE2DC449852775EDC953649339430BA297\"\n                        },\n                        {\n                            \"hashSnils\": \"B470526451C1A36747CD53AC6E0A8A753C4E6730\"\n                        }\n                    ]\n                },\n                {\n                    \"externalID\": \"000039984\",\n                    \"name\": \"CS321. Параллельное и многопоточное программирование\",\n                    \"type\": \"Зачет\",\n                    \"teachers\": [\n                        {\n                            \"hashSnils\": \"\"\n                        },\n                        {\n                            \"hashSnils\": \"45D58A5A2C33C45D02FAAC3829E28A0E6DF19C0E\"\n                        }\n                    ]\n                }\n            ]\n        }\n   \t]\n}"
+				},
+				"url": {
+					"raw": "{{gradeURL}}/api/v0/studyPlan?token=a4c0b662d23cb418c60c641b2a3b22f83a0c66e5&batch=json",
+					"host": [
+						"{{gradeURL}}"
+					],
+					"path": [
+						"api",
+						"v0",
+						"studyPlan"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "a4c0b662d23cb418c60c641b2a3b22f83a0c66e5"
+						},
+						{
+							"key": "batch",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "1189a2be-295f-499b-8192-4d6b41facb10",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "ec9a896f-745c-4738-adf7-b8255f127b20",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "2a0421c1-ee63-47c3-8572-fde5680b70d1",
+			"key": "grade-url",
+			"value": "http://testgrade.sfedu.ru",
+			"type": "string"
+		}
+	]
+}

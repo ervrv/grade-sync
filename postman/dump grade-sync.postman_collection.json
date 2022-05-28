@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "eca45b93-31a8-4b45-8cd9-397c238ec53b",
+		"name": "dump grade-sync",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "dump teachers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{syncURL}}/teachers/dump?enableDismissed=0&usemongo=true",
+					"host": [
+						"{{syncURL}}"
+					],
+					"path": [
+						"teachers",
+						"dump"
+					],
+					"query": [
+						{
+							"key": "enableDismissed",
+							"value": "0"
+						},
+						{
+							"key": "usemongo",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dump plans",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{syncURL}}/plans/dump?year=2018-19&semester=1&form=1&usemongo=true",
+					"host": [
+						"{{syncURL}}"
+					],
+					"path": [
+						"plans",
+						"dump"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "2018-19"
+						},
+						{
+							"key": "semester",
+							"value": "1"
+						},
+						{
+							"key": "form",
+							"value": "1"
+						},
+						{
+							"key": "usemongo",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dump plans evening",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{syncURL}}/plans/dump?year=2018-19&semester=1&form=2&usemongo=true",
+					"host": [
+						"{{syncURL}}"
+					],
+					"path": [
+						"plans",
+						"dump"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "2018-19"
+						},
+						{
+							"key": "semester",
+							"value": "1"
+						},
+						{
+							"key": "form",
+							"value": "2"
+						},
+						{
+							"key": "usemongo",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dump plans parttime",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{syncURL}}/plans/dump?year=2018-19&semester=1&form=3&usemongo=true",
+					"host": [
+						"{{syncURL}}"
+					],
+					"path": [
+						"plans",
+						"dump"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "2018-19"
+						},
+						{
+							"key": "semester",
+							"value": "1"
+						},
+						{
+							"key": "form",
+							"value": "3"
+						},
+						{
+							"key": "usemongo",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dump students",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{syncURL}}/students/dump?enableDismissed=0&usemongo=true",
+					"host": [
+						"{{syncURL}}"
+					],
+					"path": [
+						"students",
+						"dump"
+					],
+					"query": [
+						{
+							"key": "enableDismissed",
+							"value": "0"
+						},
+						{
+							"key": "usemongo",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

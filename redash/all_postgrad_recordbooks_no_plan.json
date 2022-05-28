@@ -1,0 +1,48 @@
+{
+	"collection": "students",
+	"aggregate": [{
+		"$match": {}
+	}, {
+		"$lookup": {
+			"from": "faculties",
+			"localField": "facultyId",
+			"foreignField": "_id",
+			"as": "facultyName"
+		}
+	}, {
+		"$project": {
+			"_id": 1,
+			"firstName": 1,
+			"secondName": 1,
+			"lastName": 1,
+			"recordBooks": 1,
+			"externalID": 1,
+			"facultyName": "$facultyName.name"
+		}
+	}, {
+		"$group": {
+			"_id": "$externalID",
+			"firstName": {"$first": "$firstName"},
+			"secondName": {"$first": "$secondName"},
+			"lastName": {"$first": "$lastName"},
+			"recordBooks": {"$first": "$recordBooks"},
+			"externalID": {"$first": "$externalID"},
+			"facultyName": {"$first": "$facultyName"}
+
+		}
+	},{
+		"$unwind": "$recordBooks"
+	}, {
+		"$lookup": {
+			"from": "disciplines",
+			"localField": "recordBooks.planExternalID",
+			"foreignField": "planExternalID",
+			"as": "StudyPlan"
+		}
+	}, {
+		"$match": {
+			"StudyPlan": [],
+			"recordBooks.degree": "Аспирант"
+		}
+	}]
+}

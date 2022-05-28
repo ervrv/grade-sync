@@ -1,0 +1,29 @@
+version: "2"
+services:
+  grade-sync:
+    container_name: ${SYNC_CONTAINER_NAME}
+    restart: always
+    build: ../../WebstormProjects/grade-sync
+    volumes:
+      - ./logs:/logs
+    ports:
+      - "${SYNC_PUBLIC_PORT}:3005"
+    links:
+      - mongo
+    # extra_hosts:
+    #  - "${SYNC_1C_HOSTNAME}"
+    # networks:
+    #  - default
+    #  - grade-backend
+  mongo:
+    container_name: ${MONGO_CONTAINER_NAME}
+    image: mongo
+    restart: always
+    volumes:
+      - "${DB_FILES_PATH}:/data/db"
+    #ports:
+      # - "${MONGO_PUBLIC_PORT}:27021"
+      # networks:
+      # grade-backend:
+      # external:
+      # name: grade-backend
